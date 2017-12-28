@@ -1,0 +1,14 @@
+E:\MyProgram_shi\vs2013\fileUpload\fileUpload\bin\fileUpload.dll.config
+E:\MyProgram_shi\vs2013\fileUpload\fileUpload\bin\fileUpload.dll
+E:\MyProgram_shi\vs2013\fileUpload\fileUpload\bin\fileUpload.pdb
+E:\MyProgram_shi\vs2013\fileUpload\fileUpload\obj\Debug\fileUpload.dll
+E:\MyProgram_shi\vs2013\fileUpload\fileUpload\obj\Debug\fileUpload.pdb
+E:\MyProgram_shi\vs2013\fileUpload\fileUpload\bin\Newtonsoft.Json.dll
+E:\MyProgram_shi\vs2013\fileUpload\fileUpload\obj\Debug\fileUpload.csprojResolveAssemblyReference.cache
+E:\MyProgram_shi\webFile\allProject\fileUpload\fileUploadBack\fileUpload\bin\fileUpload.dll.config
+E:\MyProgram_shi\webFile\allProject\fileUpload\fileUploadBack\fileUpload\bin\fileUpload.dll
+E:\MyProgram_shi\webFile\allProject\fileUpload\fileUploadBack\fileUpload\bin\fileUpload.pdb
+E:\MyProgram_shi\webFile\allProject\fileUpload\fileUploadBack\fileUpload\bin\Newtonsoft.Json.dll
+E:\MyProgram_shi\webFile\allProject\fileUpload\fileUploadBack\fileUpload\obj\Debug\fileUpload.csprojResolveAssemblyReference.cache
+E:\MyProgram_shi\webFile\allProject\fileUpload\fileUploadBack\fileUpload\obj\Debug\fileUpload.dll
+E:\MyProgram_shi\webFile\allProject\fileUpload\fileUploadBack\fileUpload\obj\Debug\fileUpload.pdb

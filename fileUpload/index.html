@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+
+    <link href="Style/baseStyle.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="upload1" style="float: left; height: 258px; width: 787px;" title="txt/pdf"> </div>
+    <div id="upload2" style="float: left; height: 258px; width: 787px;" title="jpg"></div>
+
+    <script src="js/fileHandle.js"></script>
+    <script>
+        var fileUploadObj = new FileUploadClass();
+        fileUploadObj.userSet_domId = "upload1";
+        fileUploadObj.userSet_sendRequestUrl = "http://localhost:14933/RecieveData.ashx";
+        fileUploadObj.userSet_deleteRequestUrl = "http://localhost:14933/DeleteData.ashx";
+        fileUploadObj.userSet_cancelRequestUrl = "http://localhost:14933/CancelData.ashx";
+        fileUploadObj.userSet_isAutoUpload = true;
+        fileUploadObj.userSet_extensionList = ["txt", "pdf"];
+        fileUploadObj.userSet_typeList = [];
+        fileUploadObj.init();//初始化
+
+        var picUploadObj = new FileUploadClass();
+        picUploadObj.userSet_domId = "upload2";
+        picUploadObj.userSet_sendRequestUrl = "http://localhost:14933/RecieveData.ashx";
+        picUploadObj.userSet_deleteRequestUrl = "http://localhost:14933/DeleteData.ashx";
+        picUploadObj.userSet_cancelRequestUrl = "http://localhost:14933/CancelData.ashx";
+        picUploadObj.userSet_isAutoUpload = false;
+        picUploadObj.userSet_extensionList = ["zip"];
+        picUploadObj.userSet_typeList = ["image/jpeg"];
+        picUploadObj.init();//初始化
+    </script>
+</body>
+</html>
+
+
+<!-- 暂时放这，以便直观浏览dom结构，等结构确定后需要用js创建 -->
+<!--<script type="text/html" id="fileUploadBaseTemplate">-->
+<!--<div class="fileUpload" data-objIndex="<%= obj.inPageListIndex %>">-->
+<!--<div class="fileShowDiv" ondragenter="this.classList.add(\'mouseEnter\');" ondragleave="dragLeave(this, event)" ondrop="this.classList.remove(\'mouseEnter\');">-->
+<!--<div class="fileShowBig">-->
+<!--<div class="fileShow addDiv">-->
+<!--<div class="fileShowHead">选择上传文件</div>-->
+<!--<div class="fileShowBody">+</div>-->
+<!--<input type="file" onchange="getFileAndCreateDom(this, null)" ondrop="getFileAndCreateDom(this, event);" ondragover="event.preventDefault()"  multiple/>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--<% if(!obj.isAutoUpload) { %>-->
+<!--<div class="progressDiv">-->
+<!--<div class="progressAll">-->
+<!--<div class="progressSuccess"></div>-->
+<!--<div class="progressLoading"></div>-->
+<!--<div class="progressError"></div>-->
+<!--</div>-->
+<!--<button onclick="submitButtonOnClick(this)">提&nbsp;交</button>-->
+<!--</div>-->
+<!--<% } %>-->
+<!--</div>-->
+<!--</script>-->
+
+<!--<script type="text/html" id="fileUploadBaseDivTemplate">-->
+<!--<div class="fileShow fileProgressBarWait" >-->
+<!--<input type="text" class="fileShowHead" value="<%= obj.allName %>" title="<%= obj.allName %>" onblur="changeNameOnChangeFunction(this)" ondblclick="renameOnDblClick(this)" readonly/>-->
+<!--<div class="fileShowBody">-->
+<!--<img src="Style/img/<%= obj.suffix %>_128.png" />-->
+<!--</div>-->
+<!--<div class="fileShowProgressBar">-->
+<!--<div class="fileShowProgressBarContent"></div>-->
+<!--</div>-->
+<!--<div class="fileShowFoot">-->
+<!--<label class="fileShowFootText"><%= obj.fileSize %></label>-->
+<!--<div class="cancelButton" onclick="cancelButtonOnClick(this)"><img src="./Style/img/delete_16.png" title="取消"/></div>-->
+<!--<div class="resentButton" onclick="resentButtonOnClick(this)"><img src="./Style/img/refresh_16.png" title="重新上传"/></div>-->
+<!--<div class="deleteButton" onclick="deleteButtonOnClick(this)"><img src="./Style/img/delete_16.png" title="删除"/></div>-->
+<!--</div>-->
+<!--</div>-->
+<!--</script>-->

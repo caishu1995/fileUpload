@@ -1,0 +1,318 @@
+﻿body {}
+
+/*文件上传区域*/
+.fileUpload {
+	border: 1px solid #9c9b9b;
+	border-radius: 5px;
+	height: calc(100% - 2px);
+	width: calc(100% - 2px);
+}
+	/*文件展示区*/
+	.fileUpload .fileShowDiv{
+		height: calc(100% - 41px);
+		overflow-y: auto;
+		width: 100%;
+	}
+		/*每个文件区域*/
+		.fileUpload .fileShowDiv .fileShowBig{
+			float: left;
+			height: 215px;
+			overflow: hidden;
+			width: 192px;
+		}
+		.fileUpload .fileShowDiv .fileShow {
+			border: 1px solid #d5d1d1;
+			border-radius: 5px;
+			float: left;
+			height: 173px;
+			margin: 20px 20px;
+			overflow: hidden;
+			position: relative;
+			width: 150px;
+		}
+			.fileUpload .fileShowDiv .fileShow .fileShowHead {
+				background-color: #bab9bf;
+				border: 0;
+				color: #FFFFFF;
+				font-size: 14px;
+				height: 23px;
+				left: 0;
+				line-height: 23px;
+				outline-color: #bab9bf;
+				position: absolute;
+				text-align: center;
+				text-overflow: ellipsis;
+				top: 5px;
+				width: 100%;
+			}
+			.fileUpload .fileShowDiv .fileShow .fileShowBody {
+				float: left;
+				height: calc(100% - 20px);
+				margin: 10px;
+				width: calc(100% - 20px);
+			}
+				.fileUpload .fileShowDiv .fileShow .fileShowBody img{
+					height: 100%;
+					width: 100%;
+				}
+			.fileUpload .fileShowDiv .fileShow .fileShowProgressBar{
+				background-color: #ecebf1;
+				border-bottom: 1px dotted #c5c5c5;
+				border-top: 1px dotted #c5c5c5;
+				float: left;
+				font-size: 12px;
+				height: 20px;
+				left: 0;
+				position: absolute;
+				text-align: center;
+				top: 125px;
+				width: 100%;
+				
+			}
+				.fileUpload .fileShowDiv .fileShow .fileShowProgressBar .fileShowProgressBarContent{
+					height: 100%;
+					position: relative;
+				}
+					.fileUpload .fileShowDiv .fileShow .fileShowProgressBar .fileShowProgressBarContent:before{
+						font-size: 14px;
+						left: 30px;
+						position: absolute;
+						text-align: center;
+						top: 0;
+						width: 80px;
+					}
+			.fileUpload .fileShowDiv .fileShow .fileShowFoot {
+				background-color: #e2e2e2;
+				height: 26px;
+				left: 0;
+				position: absolute;
+				top: 147px;
+				width: 100%;
+				
+				transform: translate(0,26px);
+				-webkit-transform: translate(0,26px);
+			}
+			.fileUpload .fileShowDiv .fileShow:hover .fileShowFoot{
+				transform: translate(0,0);
+				transition-duration: 1s;
+				-webkit-transform: translate(0,0);
+				-webkit-transition-duration: 1s;
+			}
+				.fileUpload .fileShowDiv .fileShow .fileShowFoot > div {
+					border-radius: 5px;
+					float: left;
+					height: 16px;
+					margin: 0 3px;
+					padding: 3px 1px;
+					width: 16px;
+				}
+					.fileUpload .fileShowDiv .fileShow .fileShowFoot > div:hover {
+						border: 2px solid #b5afaf;
+						border-radius: 5px;
+					}
+				.fileUpload .fileShowDiv .fileShow .fileShowFoot .fileShowFootText{
+					float: left;
+					font-size: 12px;
+					padding: 5px;
+					width: 64px;
+				}
+				.fileUpload .fileShowDiv .fileShow .fileShowFoot img {
+					height: 16px;
+					width: 16px;
+				}
+		.fileUpload .fileShowDiv .addDiv{
+			margin: 20px 20px;
+			position: relative;
+		}
+			.fileUpload .fileShowDiv .addDiv .fileShowHead{
+				pointer-events: none;
+			}
+			.fileUpload .fileShowDiv .addDiv .fileShowBody{
+				border: 1px dotted #c5c5c5;
+				color: #c5c5c5;
+				font-size: 36px;
+				height: 27px;
+				line-height: 24px;
+				margin: 55px 20px 30px 20px;
+				padding: 30px 41px;
+				pointer-events: none;
+				width: 27px;
+			}
+			.fileUpload .fileShowDiv .addDiv input{
+				height: 100%;
+				left: 0;
+				opacity: 0;
+				position: absolute;
+				top: 0;
+				width: 100%;
+			}
+
+	/*滚动条区*/
+	.fileUpload .progressDiv{
+		border-top: 1px dotted #9c9b9b;
+		height: 32px;
+		padding: 4px 10px;
+		width: calc(100% - 22px);
+	}
+		/*进度条区域*/
+		.fileUpload .progressDiv .progressAll {
+			border: 1px solid #ccc;
+			border-radius: 10px;
+			float: left;
+			height: 30px;
+			overflow: hidden;
+			width: calc(100% - 112px);
+		}
+			.fileUpload .progressDiv .progressAll .progressSuccess {
+				background: -moz-linear-gradient(left, #ecffed, #c1ffb7);/* Firefox 3.6+ */
+				background: -webkit-linear-gradient(left, #ecffed, #c1ffb7);/* Safari 5.1+, Chrome 10+ */
+				background: -o-linear-gradient(left, #ecffed, #c1ffb7);/* Opera 11.10+ */
+				background-color: #c1ffb7;
+				float: left;
+				height: 24px;
+				padding: 3px 0;
+				text-align: center;
+				width: 0%;
+			}
+			.fileUpload .progressDiv .progressAll .progressLoading{
+				background: -moz-linear-gradient(left, #fdd886, #fdae49);/* Firefox 3.6+ */
+				background: -webkit-linear-gradient(left,  #fdd886, #fdae49);/* Safari 5.1+, Chrome 10+ */
+				background: -o-linear-gradient(left,  #fdd886, #fdae49);/* Opera 11.10+ */
+				background-color: #fdae49;
+				float: left;
+				height: 24px;
+				padding: 3px 0;
+				text-align: center;
+				width: 0%;
+			}
+			.fileUpload .progressDiv .progressAll .progressError{
+				background: -moz-linear-gradient(right,  #e2dad4, #fd7b6f);/* Firefox 3.6+ */
+				background: -webkit-linear-gradient(right,  #e2dad4, #fd7b6f);/* Safari 5.1+, Chrome 10+ */
+				background: -o-linear-gradient(right,  #e2dad4, #fd7b6f);/* Opera 11.10+ */
+				background-color: #fd7b6f;
+				float: right;
+				height: 24px;
+				padding: 3px 0;
+				text-align: center;
+				width: 0%;
+			}
+		/*提交区域*/
+		.fileUpload .progressDiv button {
+			background-color: #efeded;
+			border: 3px solid #d5d1d1;
+			border-radius: 5px;
+			float: right;
+			font-size: 16px;
+			height: calc(100% - 2px);
+			margin: 0 0 0 20px;
+			padding: 0;
+			width: 88px;
+		}
+			.fileUpload .progressDiv button:hover{
+				background-color: rgba(3,15,43,0.55);
+				border-width: 1px;
+				color: white;
+				transform: scale(1.1);
+			}
+
+/*鼠标拖动内容进入时，可以放置的位置的动画*/
+.mouseEnter .addDiv{
+	border: 2px dotted #66a25f !important;
+	animation:pMove 1s infinite;
+	-moz-animation:pMove 1s infinite; /* Firefox */
+	-webkit-animation:pMove 1s infinite; /* Safari and Chrome */
+	-o-animation:pMove 5s infinite; /* Opera */
+}
+@keyframes pMove{
+	0%   { transform: scale(1.1);  }
+	25%  { transform: scale(1); }
+	50%  { transform: scale(1.1);  }
+	75%  { transform: scale(1); }
+	100% { transform: scale(1.1);  }
+}
+@-moz-keyframes pMove /* Firefox */{
+	0%   { transform: scale(1.1);  }
+	25%  { transform: scale(1); }
+	50%  { transform: scale(1.1);  }
+	75%  { transform: scale(1); }
+	100% { transform: scale(1.1);  }}
+@-webkit-keyframes pMove /* Safari and Chrome */{
+	0%   { transform: scale(1.1);  }
+	25%  { transform: scale(1); }
+	50%  { transform: scale(1.1);  }
+	75%  { transform: scale(1); }
+	100% { transform: scale(1.1);  }}
+@-o-keyframes pMove /* Opera */{
+	0%   { transform: scale(1.1);  }
+	25%  { transform: scale(1); }
+	50%  { transform: scale(1.1);  }
+	75%  { transform: scale(1); }
+	100% { transform: scale(1.1);  }}
+
+/*根据状态显示内容*/
+.fileProgressBarOk .fileShowProgressBarContent{
+	background: -moz-linear-gradient(left, #ecffed, #c1ffb7);/* Firefox 3.6+ */
+	background: -webkit-linear-gradient(left, #ecffed, #c1ffb7);/* Safari 5.1+, Chrome 10+ */
+	background: -o-linear-gradient(left, #ecffed, #c1ffb7);/* Opera 11.10+ */
+	background-color: #c1ffb7;
+	width: 100%;
+}
+	.fileProgressBarOk .fileShowProgressBarContent:before{
+	    content: "成功";
+	    color: #076319;
+	    position: absolute;
+	    text-shadow: 1px 1px 3px #142917;
+    }
+	.fileProgressBarOk .resentButton, .fileProgressBarOk .renameButton, .fileProgressBarOk .cancelButton{
+		display: none;
+	}
+.fileProgressBarError .fileShowProgressBarContent{
+	background: -moz-linear-gradient(left, #ffd9dc, #ff7069);/* Firefox 3.6+ */
+	background: -webkit-linear-gradient(left, #ffd9dc, #ff7069);/* Safari 5.1+, Chrome 10+ */
+	background: -o-linear-gradient(left, #ffd9dc, #ff7069);/* Opera 11.10+ */
+	background-color: #ff7069;
+	width: 100%;
+}
+	.fileProgressBarError .fileShowProgressBarContent:before{
+	content: "失败";
+	color: #411105;
+	position: absolute;
+	text-shadow: 1px 1px 3px #290b05;
+}
+	.fileProgressBarError .cancelButton{
+		display: none;
+	}
+.fileProgressBarWait .fileShowProgressBarContent{
+	width: 0%;
+}
+	.fileProgressBarWait .fileShowProgressBarContent:before{
+		content: "等待上传...";
+		color: #cefffd;
+		position: absolute;
+		text-shadow: 1px 1px 3px #0a1f1b;
+	}
+	.fileProgressBarWait .resentButton, .fileProgressBarWait .cancelButton{
+		display: none;
+	}
+.fileProgressBarUploading .fileShowProgressBarContent{
+	background: -moz-linear-gradient(left, #fffee4, #fffbbc);/* Firefox 3.6+ */
+	background: -webkit-linear-gradient(left, #fffee4, #fffbbc);/* Safari 5.1+, Chrome 10+ */
+	background: -o-linear-gradient(left, #fffee4, #fffbbc);/* Opera 11.10+ */
+	background-color: #fffbbc;
+	width: 0%;
+}
+	.fileProgressBarUploading .fileShowProgressBarContent:before{
+	content: "正在上传";
+	color: #fff800;
+	position: absolute;
+	text-shadow: 1px 1px 4px #2a2602;
+	top: 2px;
+}
+	.fileProgressBarUploading .resentButton, .fileProgressBarUploading .deleteButton, .fileProgressBarUploading .renameButton{
+		display: none;
+	}
+	
+/*允许改名时样式*/
+.canRename{
+	background-color: #00656e !important;
+}
