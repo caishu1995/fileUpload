@@ -81,7 +81,7 @@
         else loadingPercent = parseInt((loadingUploadCount * 100 * 100) / allCount) / 100;
 
         //计算上传错误比例
-        if(hasSendCount == 0) errorPercent = 0;
+        if(hasErrorCount == 0) errorPercent = 0;
         else errorPercent = parseInt((hasErrorCount * 100 * 100) / allCount) / 100;
 
         //改变宽度
