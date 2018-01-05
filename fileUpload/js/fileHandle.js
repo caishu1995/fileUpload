@@ -426,8 +426,6 @@
     this.unifiedSubmission = function(thisEle) {
         thisEle.disabled = true;//禁止多次提交
 
-        changeProgressBarWidth(0, 0, 0, 0, thisEle.parentNode.children[0]);//显示总进度条
-
         //统计所有没上传的文件
         for(var i = 0; i < this.fileWaitUpLoadList.length; i++){
             if((this.fileWaitUpLoadList[i].state === 0) || (this.fileWaitUpLoadList[i].state === 2)){
@@ -436,6 +434,8 @@
                 this.allUploadCount++;
             }
         }
+
+        changeProgressBarWidth(0, 0, 0, 0, thisEle.parentNode.children[0]);//显示总进度条
 
         this.uploadFileAuto();//提交全部
 
@@ -547,8 +547,6 @@
     ///e      :事件
     function progressFunction (e, fileObj){
         if (e.lengthComputable) {
-            if(e.loaded == e.total){ return; } //如果已经传完直接进入load即可
-
             document.getElementById(fileObj.userSet_domId + "_" + fileObj.needUploadIdList[0]).children[0].children[2].children[0].style.width = (e.loaded * 100 / e.total) + "%"; //改变宽度为比例
         }
     }
